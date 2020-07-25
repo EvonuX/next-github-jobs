@@ -1,0 +1,144 @@
+@import './variables.scss';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: sans-serif;
+  background-color: #f6f7fb;
+  color: $primary;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $primary;
+}
+
+main,
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.btn {
+  padding: 1.4rem 4.8rem;
+  color: #fff;
+  background-color: $action;
+  border: none;
+  border-radius: 0.4rem;
+
+  @media screen and (max-width: 480px) {
+    padding: 1.3rem;
+  }
+}
+
+.input {
+  &__field {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+
+    svg {
+      position: absolute;
+      left: 2rem;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    input {
+      text-indent: 2rem;
+      display: block;
+      width: 38rem;
+      border: none;
+      padding: 1.7rem 1.4rem;
+      background-color: #fff;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+      border-radius: 0.4rem;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $secondary;
+      }
+    }
+  }
+
+  &__radio,
+  &__checkbox {
+    margin: 1rem 0;
+
+    input {
+      display: none;
+
+      &:checked + label::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0.2rem;
+        left: 0.7rem;
+        width: 0.6rem;
+        height: 1.4rem;
+        border: solid #fff;
+        border-width: 0 0.2rem 0.2rem 0;
+        transform: rotate(45deg);
+      }
+
+      &:checked + label::before {
+        background-color: $action;
+        border: 0.1rem solid $action;
+      }
+    }
+
+    label {
+      position: relative;
+
+      &::before {
+        content: '';
+        background-color: transparent;
+        border: 0.1rem solid $secondary;
+        box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.05),
+          inset 0px -1.5rem 1rem -1.2rem rgba(0, 0, 0, 0.05);
+        padding: 10px;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        cursor: pointer;
+        border-radius: 0.4rem;
+        margin-right: 1.2rem;
+      }
+    }
+  }
+}
+
+.color--secondary {
+  color: $secondary;
+}
+
+.chip {
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+  }
+
+  border-radius: 0.4rem;
+  border: 1px solid #334680;
+  font-size: 1.2rem;
+  padding: 0.6rem 0.8rem;
+}
+
+.text--small {
+  font-size: 1.2rem;
+}

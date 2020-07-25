@@ -1,0 +1,73 @@
+@import '../variables.scss';
+
+.job {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  margin-top: 3.3rem;
+
+  a {
+    color: $action;
+  }
+
+  &__sidebar {
+    @media screen and (min-width: 768px) {
+      width: 30%;
+    }
+  }
+
+  &__info {
+    @media screen and (min-width: 768px) {
+      width: 70%;
+    }
+
+    h1 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 0;
+      margin-bottom: 1rem;
+
+      div {
+        margin-left: 1.7rem;
+      }
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        div {
+          margin: 0;
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    &__company {
+      display: flex;
+      margin-top: 3.5rem;
+
+      img {
+        object-fit: contain;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}

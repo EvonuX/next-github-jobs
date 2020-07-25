@@ -1,0 +1,54 @@
+.job {
+  padding: 1.2rem;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  display: grid;
+  grid-template-columns: 10rem auto;
+  margin-bottom: 3.2rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 11rem auto 28rem;
+  }
+
+  img {
+    border-radius: 0.4rem;
+    object-fit: contain;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__company {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+
+  &__location {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    @media screen and (max-width: 480px) {
+      grid-column: 2/3;
+      margin-top: 1.5rem;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0.5rem;
+
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

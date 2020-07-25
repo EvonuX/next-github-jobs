@@ -1,0 +1,54 @@
+.home {
+  &__hero {
+    position: relative;
+
+    @media screen and (max-width: 480px) {
+      img {
+        height: 13rem;
+        object-fit: cover;
+      }
+    }
+
+    &__input {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      margin: 0;
+
+      input {
+        width: 30rem;
+        text-indent: 2rem;
+      }
+
+      button {
+        position: absolute;
+        right: 0.3rem;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      input {
+        width: 70rem;
+      }
+    }
+  }
+
+  &__wrapper {
+    margin-top: 4.2rem;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+
+      &__sidebar {
+        width: 30%;
+      }
+
+      &__listing {
+        width: 70%;
+      }
+    }
+  }
+}
